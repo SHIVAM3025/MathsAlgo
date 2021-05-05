@@ -1,0 +1,23 @@
+1. If we have the problem of finding the new program for
+
+Finding the sum for the multiples of any numbers till any number
+
+PRocess
+
+1. get the array of numbers
+2. Make them in a sequence and make them positive . (Smaller to Greater)
+3. Multiples for any given numbers excluding the overlaps are given by
+
+4.    SumDivisibleBy(n1)+SumDivisibleBy(n2) ..... SumDivisibleBy(n)-SumDivisibleBy(LCM(n1,...n)) - SumDivisibleBy(LCM(n1,--- n-1)) - ...... -SumDivisibleBy(LCM(n1, n2))
+
+// Variable p is the limit till we want the sequence to operate
+
+Function SumDivisibleBy(n)
+ p=target div n
+ return n*(p*(p+1)) div 2
+EndFunction
+
+
+Because
+//Explanation for the function
+3+6+9+12+......+999=3*(1+2+3+4+...+333)
